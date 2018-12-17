@@ -1,0 +1,28 @@
+---
+title: "developing-data-product-project-1-rmd"
+output:
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+```
+
+#Peer-graded Assignment: R Markdown and Leaflet  
+###Muhammad Ali Shaaban  
+###17 December 2018  
+
+Create a web page using R Markdown that features a map created with Leaflet.  
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.  
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!  
+
+```{r setup, include=FALSE}
+library(leaflet)
+```
+
+```{r}
+the_map <- leaflet() %>% addTiles() 
+the_map <- the_map %>% addMarkers(lat= 30.819722, lng= 30.824167, popup="Home")
+the_map
+```
